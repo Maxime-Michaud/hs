@@ -29,16 +29,8 @@ namespace QcaugmenteBackend.Models
             }
             catch (Exception e) //Met des données clairement erronées pour éviter qu'elles soient considérées
             {
-                try
-                {
-                    this.lat = double.Parse(lat.Replace('.', ','));
-                    this.lon = double.Parse(lon.Replace('.', ','));
-                }
-                catch
-                {
-                    this.lat = -500;
-                    this.lon = -500;
-                }
+                this.lat = -500;
+                this.lon = -500;
             }
         }
 

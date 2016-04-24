@@ -48,5 +48,10 @@ namespace QcaugmenteBackend.Models
                 return;
             }
         }
+
+        public Parc()
+        {
+
+        }
     }
 }
