@@ -16,7 +16,6 @@ namespace QcaugmenteBackend.Models
         {
             get
             {
-                bool dispo = false;
                 using (var DB = new DB())
                 {
                     this.endroit.pos = (from e in DB.Endroits where e.id == this.EndroitId select e.pos).FirstOrDefault();
@@ -25,12 +24,11 @@ namespace QcaugmenteBackend.Models
                         double distance = new Position(z.latitude, z.longitude).distance(this.endroit.pos);
                         if (distance < 100)
                         {
-                            dispo = true;
-                            break;
+                            return true;
                         }
                     }
                 }
-                return dispo;
+                return false;
             }
             set
             {
