@@ -10,7 +10,7 @@ using System.IO;
 
 namespace QcaugmenteBackend.Controllers
 {
-    public class ZapController : ApiController
+    public class Zap2Controller : ApiController
     {
         public List<Zap> get()
         {

@@ -11,7 +11,7 @@ using System.Text.RegularExpressions;
 
 namespace QcaugmenteBackend.Controllers
 {
-    public class RestaurantController : ApiController
+    public class Restaurant2Controller : ApiController
     {
         public IEnumerable<Restaurant> get()
         {

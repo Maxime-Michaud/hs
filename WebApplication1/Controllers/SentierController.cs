@@ -10,7 +10,7 @@ using System.Text;
 
 namespace QcaugmenteBackend.Controllers
 {
-    public class SentierController : ApiController
+    public class Sentier2Controller : ApiController
     {
         public List<Sentier> get()
         {

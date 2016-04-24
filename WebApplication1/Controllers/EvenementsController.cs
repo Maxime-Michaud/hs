@@ -11,7 +11,7 @@ using System.Text.RegularExpressions;
 
 namespace QcaugmenteBackend.Controllers
 {
-    public class EventController : ApiController
+    public class Evenement2Controller : ApiController
     {
         public IEnumerable<Evenement> get()
         {

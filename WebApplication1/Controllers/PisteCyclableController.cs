@@ -9,7 +9,7 @@ using System.IO;
 
 namespace QcaugmenteBackend.Controllers
 {
-    public class PisteCyclableController : ApiController
+    public class PisteCyclable2Controller : ApiController
     {
         public List<PisteCyclable> get()
         {

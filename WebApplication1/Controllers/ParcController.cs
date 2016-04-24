@@ -9,7 +9,7 @@ using System.Text;
 using QcaugmenteBackend.Models;
 namespace QcaugmenteBackend.Controllers
 {
-    public class ParcController : ApiController
+    public class Parc2Controller : ApiController
     {
         public List<Parc> get()
         {
