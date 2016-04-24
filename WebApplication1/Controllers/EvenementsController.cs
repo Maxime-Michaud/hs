@@ -45,7 +45,7 @@ namespace QcaugmenteBackend.Controllers
                         evt.endroit = (from e in db2.Endroits where e.id == evt.EndroitId select e).FirstOrDefault();
                         if (userPos.distance(evt.endroit.pos) < maxDist)
                         {
-                            evts.Add((ZapEvenement)evt);
+                            evts.Add(new ZapEvenement(evt));
                         }
                     }
                 }
