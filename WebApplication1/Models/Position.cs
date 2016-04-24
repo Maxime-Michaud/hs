@@ -15,13 +15,15 @@ namespace QcaugmenteBackend.Models
         [DataMember]
         public double lon { get; set; }
 
-
-        public bool zapAccessible { get; set; }
-
         public Position(string lat, string lon)
         {
             try
             {
+                lat = lat.Replace(".", System.Globalization.NumberFormatInfo.CurrentInfo.NumberDecimalSeparator);
+                lon = lon.Replace(".", System.Globalization.NumberFormatInfo.CurrentInfo.NumberDecimalSeparator);
+                lat = lat.Replace(",", System.Globalization.NumberFormatInfo.CurrentInfo.NumberDecimalSeparator);
+                lon = lon.Replace(",", System.Globalization.NumberFormatInfo.CurrentInfo.NumberDecimalSeparator);
+
                 this.lat = double.Parse(lat);
                 this.lon = double.Parse(lon);
             }

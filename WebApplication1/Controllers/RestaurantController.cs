@@ -15,14 +15,13 @@ namespace QcaugmenteBackend.Controllers
     {
         public IEnumerable<ZapRestaurant> get(string Latitude, string Longitude, string Rayon)
         {
-            Position userPos = Position.PositionWTF(Latitude, Longitude);
+            Position userPos = new Position(Latitude, Longitude);
             double maxDist = double.Parse(Rayon);
             List<ZapRestaurant> evts;
             evts = new List<ZapRestaurant>();
             foreach (var evt in get())
             {
-
-                if (userPos.distance(Position.PositionWTF(evt.Latitude, evt.Longitude)) < maxDist)
+                if (userPos.distance(new Position(evt.Latitude, evt.Longitude)) < maxDist)
                 {
                     evts.Add(new ZapRestaurant(evt));
                 }
