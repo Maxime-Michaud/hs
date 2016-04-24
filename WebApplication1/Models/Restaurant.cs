@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Runtime.Serialization;
 using System.Text.RegularExpressions;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace QcaugmenteBackend.Models
 {
@@ -42,6 +43,15 @@ namespace QcaugmenteBackend.Models
         public string DescriptionCourte { get; set; }
         [DataMember]
         public string FichierImage { get; set; }
+
+        public Endroit endroit { get; set; }
+        [ForeignKey("endroit")]
+        public int EndroitId { get; set; }
+
+        public Restaurant()
+        {
+
+        }
 
         public Restaurant(string s)
         {
