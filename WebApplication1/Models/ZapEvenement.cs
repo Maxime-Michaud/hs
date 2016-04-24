@@ -16,16 +16,21 @@ namespace QcaugmenteBackend.Models
         {
             get
             {
+                bool dispo = false;
                 using (var DB = new DB())
                 {
                     this.endroit.pos = (from e in DB.Endroits where e.id == this.EndroitId select e.pos).FirstOrDefault();
-                    foreach (var v in new ZapController().get())
+                    foreach (var z in new Zap2Controller().get())
                     {
-                        double distance = new Position(v.latitude, v.longitude).distance(this.endroit.pos);
-                        return distance < 50;
+                        double distance = new Position(z.latitude, z.longitude).distance(this.endroit.pos);
+                        if (distance < 100)
+                        {
+                            dispo = true;
+                            break;
+                        }
                     }
                 }
-                return false;
+                return dispo;
             }
             set
             {
@@ -34,6 +39,43 @@ namespace QcaugmenteBackend.Models
 
         }
 
+        [DataMember]
+        double Latitude
+        {
+            get
+            {
+                using (var DB = new DB())
+                {
+                    endroit.pos = (from e in DB.Endroits where e.id == this.EndroitId select e.pos).FirstOrDefault();
+                    if (endroit != null)
+                        return endroit.pos.lat;
+                    return -500;
+                }
+            }
+            set
+            {
+
+            }
+        }
+
+        [DataMember]
+        double Longitude
+        {
+            get
+            {
+                using (var DB = new DB())
+                {
+                    endroit.pos = (from e in DB.Endroits where e.id == this.EndroitId select e.pos).FirstOrDefault();
+                    if (endroit != null)
+                        return endroit.pos.lon;
+                    return -500;
+                }
+            }
+            set
+            {
+
+            }
+        }
         public ZapEvenement()
         {
 
