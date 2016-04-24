@@ -11,6 +11,22 @@ namespace QcaugmenteBackend.Controllers
 {
     public class Parc2Controller : ApiController
     {
+        public IEnumerable<ZapParc> get(string Latitude, string Longitude, string Rayon)
+        {
+            Position userPos = new Position(Latitude, Longitude);
+            double maxDist = double.Parse(Rayon);
+            List<ZapParc> evts;
+            evts = new List<ZapParc>();
+            foreach (var evt in get())
+            {
+                if (userPos.distance(new Position(evt.y, evt.x)) < maxDist)
+                {
+                    evts.Add(new ZapParc(evt));
+                }
+            }
+            return evts;
+        }
+
         public List<Parc> get()
         {
             var pc = new List<Parc>();
