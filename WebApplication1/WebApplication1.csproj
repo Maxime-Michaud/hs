@@ -127,6 +127,7 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\EvenementsController.cs" />
+    <Compile Include="Controllers\InteretTouristiqueController.cs" />
     <Compile Include="Controllers\ParcController.cs" />
     <Compile Include="Controllers\PisteCyclableController.cs" />
     <Compile Include="Controllers\RestaurantController.cs" />
@@ -144,6 +145,7 @@
     <Compile Include="Models\DB.cs" />
     <Compile Include="Models\Endroit.cs" />
     <Compile Include="Models\Evenement.cs" />
+    <Compile Include="Models\InteretTouristique.cs" />
     <Compile Include="Models\Parc.cs" />
     <Compile Include="Models\PisteCyclable.cs" />
     <Compile Include="Models\Position.cs" />
@@ -151,6 +153,7 @@
     <Compile Include="Models\Sentier.cs" />
     <Compile Include="Models\Zap.cs" />
     <Compile Include="Models\ZapEvenement.cs" />
+    <Compile Include="Models\ZapInteretTouristique.cs" />
     <Compile Include="Models\ZapParc.cs" />
     <Compile Include="Models\ZapRestaurant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -143,7 +143,6 @@ C:\Users\Nicholas1\Desktop\qc3\hs\WebApplication1\bin\System.Web.Http.WebHost.xm
 C:\Users\Nicholas1\Desktop\qc3\hs\WebApplication1\bin\fr\System.Net.Http.Formatting.resources.dll
 C:\Users\Nicholas1\Desktop\qc3\hs\WebApplication1\bin\fr\System.Web.Http.resources.dll
 C:\Users\Nicholas1\Desktop\qc3\hs\WebApplication1\bin\fr\System.Web.Http.WebHost.resources.dll
-C:\Users\Nicholas1\Desktop\qc3\hs\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
 C:\Users\Nicholas1\Desktop\qc3\hs\WebApplication1\obj\Debug\WebApplication1.Migrations.tewasf.resources
 C:\Users\Nicholas1\Desktop\qc3\hs\WebApplication1\obj\Debug\WebApplication1.csproj.GenerateResource.Cache
 C:\Users\Nicholas1\Desktop\qc3\hs\WebApplication1\obj\Debug\WebApplication1.dll

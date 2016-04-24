@@ -25,6 +25,7 @@ namespace QcaugmenteBackend
                 name: "LatLonRay",
                 routeTemplate: "api/{controller}/{Latitude}/{Longitude}/{Rayon}"
             );
+
         }
     }
 }
