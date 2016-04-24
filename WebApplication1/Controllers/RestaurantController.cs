@@ -13,6 +13,22 @@ namespace QcaugmenteBackend.Controllers
 {
     public class Restaurant2Controller : ApiController
     {
+        public IEnumerable<ZapRestaurant> get(string Latitude, string Longitude, string Rayon)
+        {
+            Position userPos = Position.PositionWTF(Latitude, Longitude);
+            double maxDist = double.Parse(Rayon);
+            List<ZapRestaurant> evts;
+            evts = new List<ZapRestaurant>();
+            foreach (var evt in get())
+            {
+
+                if (userPos.distance(Position.PositionWTF(evt.Latitude, evt.Longitude)) < maxDist)
+                {
+                    evts.Add(new ZapRestaurant(evt));
+                }
+            }
+            return evts;
+        }
         public IEnumerable<Restaurant> get()
         {
             var evenements = new List<Restaurant>();

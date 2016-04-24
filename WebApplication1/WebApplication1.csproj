@@ -151,6 +151,7 @@
     <Compile Include="Models\Sentier.cs" />
     <Compile Include="Models\Zap.cs" />
     <Compile Include="Models\ZapEvenement.cs" />
+    <Compile Include="Models\ZapRestaurant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

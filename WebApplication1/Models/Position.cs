@@ -27,8 +27,16 @@ namespace QcaugmenteBackend.Models
             }
             catch (Exception e) //Met des données clairement erronées pour éviter qu'elles soient considérées
             {
-                this.lat = -500;
-                this.lon = -500;
+                try
+                {
+                    this.lat = double.Parse(lat.Replace('.', ','));
+                    this.lon = double.Parse(lon.Replace('.', ','));
+                }
+                catch
+                {
+                    this.lat = -500;
+                    this.lon = -500;
+                }
             }
         }
 
@@ -64,6 +72,10 @@ namespace QcaugmenteBackend.Models
             return Math.PI / 180 * v;
         }
 
+        public static Position PositionWTF(string lat, string lon)
+        {
+            return (new Position(lat.Replace('.', ','), lon.Replace('.', ',')));
+        }
 
     }
 }
